@@ -1,0 +1,17 @@
+<resources>
+    <string name="appName">MoviesProject</string>
+
+    <!-- MovieList Page Start -->
+    <string name="movieListAverageVote">%1$s rating</string>
+    <string name="movieListActionRetry">Retry</string>
+    <!-- MovieList Page End -->
+
+    <!-- MovieDetail Page Start -->
+    <string name="movieDetailTextStructure"><![CDATA[
+    <b>Name:</b> %1$s<br/><br/>
+    <b>Release Date:</b> %2$s<br/><br/>
+    <b>Overview:</b> %3$s<br/><br/>
+]]></string>
+    <!-- MovieDetail Page End -->
+
+</resources>
