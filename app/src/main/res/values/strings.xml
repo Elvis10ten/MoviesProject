@@ -4,6 +4,7 @@
     <!-- MovieList Page Start -->
     <string name="movieListAverageVote">%1$s rating</string>
     <string name="movieListActionRetry">Retry</string>
+    <string name="movieListActionSortByDate">Sort by date</string>
     <!-- MovieList Page End -->
 
     <!-- MovieDetail Page Start -->

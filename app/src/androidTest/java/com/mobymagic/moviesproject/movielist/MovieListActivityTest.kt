@@ -29,7 +29,6 @@ class MovieListActivityTest {
 
     @Before
     fun setUp() {
-        // Register BackgroundWork IdlingResource
         IdlingRegistry.getInstance().register(EspressoIdlingResource.getIdlingResource())
     }
 

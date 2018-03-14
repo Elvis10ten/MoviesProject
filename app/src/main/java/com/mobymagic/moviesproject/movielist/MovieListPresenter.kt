@@ -55,8 +55,10 @@ class MovieListPresenter(private val movieService: MovieService,
         compositeDisposable.add(disposable)
     }
 
-    override fun onSortByDateButtonClicked() {
-        // TODO
+    override fun onSortByDateButtonClicked(movies: List<Movie>) {
+        movies.sortedWith(compareBy( { it.releaseDate }))
+        movieListView?.clearMovies()
+        movieListView?.addMovies(movies)
     }
 
     override fun onScrollToEndOfList() {

@@ -27,6 +27,8 @@ class MovieListAdapter(private val clickListener : MovieListAdapter.OnMovieClick
         notifyDataSetChanged()
     }
 
+    fun getMovies() = movies
+
     override fun getItemCount() = movies.size
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {

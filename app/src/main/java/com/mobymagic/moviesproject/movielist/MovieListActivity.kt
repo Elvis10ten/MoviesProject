@@ -29,8 +29,7 @@ class MovieListActivity :
 
         setSupportActionBar(toolbar)
 
-        setupSwipeRefreshLayout()
-        setupRecyclerView()
+        setupViews()
         setupPresenter(savedInstanceState)
     }
 
@@ -39,16 +38,23 @@ class MovieListActivity :
         movieListPresenter.dropView()
     }
 
-    private fun setupSwipeRefreshLayout() {
+    private fun setupViews() {
+        // Setup swipe refresh layout
         swipeRefreshLayout.setColorSchemeColors(Color.RED, Color.GREEN, Color.BLUE)
         swipeRefreshLayout.setOnRefreshListener { movieListPresenter.onSwipeRefreshPerformed() }
-    }
 
-    private fun setupRecyclerView() {
+        // Setup sort by date button
+        sortByDateButton.setOnClickListener( {
+            movieListPresenter.onSortByDateButtonClicked(movieListAdapter.getMovies())
+        })
+
+        // Setup recyclerView
         recyclerView.layoutManager = GridLayoutManager(this, 2)
         recyclerView.addItemDecoration(ItemOffsetDecoration(this,
                 R.dimen.movieListGridSpacing))
         recyclerView.adapter = movieListAdapter
+
+        // TODO add endless scroll
     }
 
     private fun setupPresenter(savedInstanceState: Bundle?) {

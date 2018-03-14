@@ -23,7 +23,7 @@ interface MovieListUiContract {
     interface Presenter: BasePresenter<View> {
 
         fun fetchMovies()
-        fun onSortByDateButtonClicked()
+        fun onSortByDateButtonClicked(movies: List<Movie>)
         fun onRetryButtonClicked()
         fun onSwipeRefreshPerformed()
         fun onScrollToEndOfList()

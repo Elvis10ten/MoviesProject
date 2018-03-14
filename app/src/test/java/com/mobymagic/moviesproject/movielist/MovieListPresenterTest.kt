@@ -96,6 +96,10 @@ class MovieListPresenterTest {
 
     @Test
     fun onSortByDateButtonClicked() {
+        movieListPresenter.onSortByDateButtonClicked(movieResponse.movies)
+
+        verify(movieListView).clearMovies()
+        verify(movieListView).addMovies(movieResponse.movies)
     }
 
     @Test
